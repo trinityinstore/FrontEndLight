@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head>
+    <script src="lib/jquery-3.3.1.js"></script>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+    <script src="lib/p5.sound.min.js"></script>
+    <script src="lib/mqttws31.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="lib/style.css">
+    <meta charset="utf-8">
+    <script src="sketch.js"></script>
+<button onclick="client.connect(options); ">1. Connect</button>
+<button onclick="client.subscribe('FEL/#', {qos: 2}); alert('Subscribed'); ">2. FEL Subscribe</button>
+<button onclick="publish('Hello from FrontEndLight','FEL/bar',2);">3. Publish</button>
+<button onclick="client.disconnect();">(4. Disconnect)</button>
+<!--<div id="messages"></div>-->
+
+  </head>
+  <body>
+
+
+
+</body></html>
