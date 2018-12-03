@@ -50,7 +50,7 @@ function draw() {
 
 	fill(200,200,100);
 	textSize(36);
-	textFont('font/BigelowRules-Regular.ttf');
+	textFont(santafont);
 	text('Claus-O-Meter',1000,50);
 	var spirit = cat[28]/1;
 	spirit = spirit.toFixed(2);
