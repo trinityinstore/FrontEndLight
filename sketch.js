@@ -6,10 +6,19 @@ let light5;
 let light6;
 let light7;
 
+
 var spark;
+var reindeer;
 function preload() {
   spark = loadImage('img/wmt_spark12351.jpg');
+	reindeer = loadImage('img/santa.jpg');
 }
+
+
+// var santafont;
+// function preload() {
+//   santafont = loadFont('font/BigelowRules-Regular.ttf');
+// }
 
 
 
@@ -25,6 +34,7 @@ function setup() {
 	print(cat);
 }
 
+
 var cat=[150,150,150];
 
 function draw() {
@@ -37,6 +47,27 @@ function draw() {
 	light5.show(5,cat[12],cat[13],cat[14],cat[25]);
 	light6.show(6,cat[15],cat[16],cat[17],cat[26]);
 	light7.show(7,cat[18],cat[19],cat[20],cat[27]);
+
+	fill(200,200,100);
+	textSize(36);
+	//textFont('font/BigelowRules-Regular.ttf');
+	text('Claus-O-Meter',1000,50);
+	var spirit = cat[28]/1;
+	spirit = spirit.toFixed(2);
+	spirit = spirit*100;
+	textSize(16);
+	text(spirit,1040,80);
+	text('X-mas Spirit          %',1000,80);
+
+
+	fill(200,200,100);
+	rect(940,90,120,270,50);
+	fill(255,0,0);
+	rect(950,100,100,250,40);
+	fill(0,255,0);
+	rect(950,350-map(cat[28],0,1,0,250),100,map(cat[28],0,1,0,250),40);
+
+	image(reindeer,1085,350-map(cat[28],0,1,0,250),90,60);
 
 
 
@@ -61,6 +92,10 @@ function draw() {
 
 	 cat = message.payloadString.split(' ').map(Number);
 	 print(cat);
+	 // var spirit = cat[28]/1;
+	 // fill(200,200,100);
+	 // textSize(16);
+ 	 // text('Christmas Spirit'&spirit&'%',1000,100);
 
  };
 
